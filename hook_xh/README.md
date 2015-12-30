@@ -15,7 +15,7 @@ How to Use?
 Simple, Include the class file in your application bootstrap (setup/load/configuration or whatever you call it) and start hooking your filter and action hooks using the global `$hooks`. Ex:
 
 ```PHP
-include_once('php-hooks.php');
+//include_once('php-hooks.php');
 global $hooks;
 $hooks->add_action('header_action','echo_this_in_header');
 
@@ -132,13 +132,7 @@ Methods
 
 There are a few more methods but these are the main Ones you'll use :).
 
-Download
-========
-You can download this project in either [zip][1] or [tar][2] formats
 
-You can also clone the project with Git by running:
-
-    $ git clone git://github.com/bainternet/PHP-Hooks.git
 
 License
 =======
