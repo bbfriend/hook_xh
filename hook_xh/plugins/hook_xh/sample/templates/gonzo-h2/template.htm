@@ -1,0 +1,103 @@
+<!DOCTYPE HTML >
+<html lang="<?php echo $sl;?>">
+<head>
+<?php echo head();?>
+</head>
+<body <?php echo onload();?>
+
+
+<?php /****** Test Code1 ****/
+
+echo '<div id="extra_header">';
+do_action('hookname_header_action');
+echo '</div>';
+
+?>
+
+<hr>
+
+<?php /****** Test Code2 ****/
+include $pth['folder']['template'].'test_func1.php'; 
+
+gonzo_h2_func1();
+?>
+<hr>
+<?php 
+/************ 
+http://ara-web.net/blog/wordpress/post-590/
+*************/
+//
+$myname = 'YAMADA';
+$catname = 'Tama';
+apply_filters('hookname_the_profile', $myname , $catname );//フックされてる関数の方を実行する
+//the_profile($myname , $catname);//default func
+?>
+
+
+
+
+
+
+<!-- Header: Name der Seite -->
+<div class="row">
+    <div class="column grid_12">
+       	<h1><?php echo sitename();?></h1>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Header: Bild 端ber gesamte Breite -->
+<div class="row">
+    <div class="column grid_12">
+			<div id=banner>
+			</div>
+    </div>
+</div>
+
+<!-- Content/Editbereich und sidebar  -->
+<div class="row">
+    <div class="column grid_9">
+        <?php echo editmenu();?>
+        <?php echo content();?>
+    </div>
+    <div class="column grid_3">
+
+	<?php echo toc();?>
+    <ul>
+        <li><?php echo printlink();?></li>
+        <li><?php echo sitemaplink();?></li>
+        <li><?php echo searchbox();?></li>
+        <li><?php echo lastupdate();?></li>
+        <li><?php echo mailformlink();?></li>
+   </ul>
+   </div>
+</div>
+<!-- Newsboxen 1-3  -->
+<div class="row">
+<hr>
+    <div class="column grid_4">
+    <?php echo newsbox('News01');?>
+    </div>
+    <div class="column grid_4">
+    <?php echo newsbox('News02');?>
+    </div>
+    <div class="column grid_4">
+    <?php echo newsbox('News03');?>
+    </div>
+</div>
+<!-- Footer -->
+<div class="row">
+    <div class="column grid_12">
+        <p><?php echo top();?>  | Powered by <a href="http://www.cmsimple-xh.org/">CMSimple_XH</a> | Template by <a href="http://web57.ws/">w.scharff</a> | Accompanying <a href="http://www.cmsimple-xh.org/wiki/doku.php/template_tutorial">Template Tutorial</a> | <?php echo loginlink();?></p>
+    </div>
+</div>
+<?php
+echo "<hr>";
+var_dump($_SESSION);
+?>
+</body>
+</html>
