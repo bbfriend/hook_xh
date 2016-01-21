@@ -2,7 +2,10 @@
 hook system for CMSimple 
 
 1:Unzip  
-2:Upload hook_xh --> plugins/hook_xh
+2:plugins/hook_xh/* ----> plugins/hook_xh/*.  
+3:cmsimple/add_to_userfuncs.php ---> cmsimple/userfuncs.php  
+ * if you have already have a userfuncs.php, please copy the source code. Very simple code.  
+
 
 
 Original: https://github.com/bainternet/PHP-Hooks  
