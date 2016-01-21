@@ -1,5 +1,5 @@
-# hook_xh
-hook system for CMSimple 
+# hook_xh  
+This plugin is to use the familiar <a href="http://codex.wordpress.org/Plugin_API" target="_blank">WordPress hook system</a> in CMSimple_XH. Basic usage is the same as WordPress Plugin API
 
 1:Unzip  
 2:plugins/hook_xh/* ----> plugins/hook_xh/*.  
