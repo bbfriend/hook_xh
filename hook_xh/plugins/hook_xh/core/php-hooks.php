@@ -359,7 +359,7 @@ if (!class_exists('Hooks')){
       do {
         foreach ( (array) current($this->filters[$tag]) as $the_ )
           if ( !is_null($the_['function']) )
-            call_user_func_array($the_['function'], array_slice($args, 0, (int) $the_['accepted_args']));
+            @call_user_func_array($the_['function'], array_slice($args, 0, (int) $the_['accepted_args']));
 
       } while ( next($this->filters[$tag]) !== false );
 

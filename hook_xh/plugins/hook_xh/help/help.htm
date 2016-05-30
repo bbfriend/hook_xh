@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="GENERATOR" content="JustSystems Homepage Builder Version 19.0.6.0 for Windows">
-<title>無題ドキュメント</title>
+<title>Hook_XH</title>
 <link href="stylesheet.css" rel="stylesheet" type="text/css"><!--[if lte IE 7]>
 <style>
-.content { margin-right: -1px; } /* この 1 ピクセルの負のマージンはこのレイアウトのどのカラムにも配置でき、同じ補正効果を持ちます。 */
-ul.nav a { zoom: 1; }  /* zoom プロパティにより、IE の hasLayout をトリガーします。これは、リンク間の余分なホワイトスペースを修正するのに必要です。 */
+.content { margin-right: -1px; }
 </style>
 <![endif]-->
 </head>
@@ -129,6 +128,7 @@ global $hooks<br>
 <br>
 add_filter( $tag, $function_to_add, $priority = 10, $accepted_args = 1 ) <br>
 has_filter($tag, $function_to_check = false)<br>
+apply_filters( $tag, $value )<br>
 apply_filters_ref_array($tag, $args) <br>
 remove_filter( $tag, $function_to_remove, $priority = 10 )<br>
 remove_all_filters( $tag, $priority = false )<br>
